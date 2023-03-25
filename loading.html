@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOADING</title>
+    <link rel="stylesheet" href="./css/loading.css">
+</head>
+
+<body>
+
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <p class="demo"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+
+        <!-- <script>
+            $(window).on("load",function(){
+                $(".loader-container").fadeOut(1000)
+            });
+        </script> -->
+
+        <script>
+            $(window).on("load", function() {
+                // console.log("jkhbkjbhjk");
+
+                setTimeout(function() {
+                    $(".loader-container").fadeOut();
+                    $(".demo").html("HELLOW!")
+                }, 2000);
+            })
+        </script>
+
+</body>
+
+</html>

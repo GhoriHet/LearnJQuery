@@ -32,7 +32,11 @@
                         <li>Today's Deal</li>
                         <li>Compare</li>
                         <li>Wishlist</li>
-                        <li > <a href="" class="my-ac">My Account<i class="fa-sharp fa-solid fa-angle-down"></i></a>
+                        <li class="my-ac"> 
+                            <a href="#">
+                                My Account
+                                <i class="fa-sharp fa-solid fa-angle-down"></i>
+                            </a>
                             <ul class="my-acdata">
                                 <li><a href="#">Checkout</a></li>
                                 <li><a href="#">My account</a></li>
@@ -58,8 +62,8 @@
 
     <script>
         $(document).ready(function(){
-           $("ul li").click(function(){
-            $("ul li ul").slideToggle(2000);
+           $(".my-ac").click(function(){
+            $(".my-acdata").slideToggle(500);
            });
         });
     </script>
