@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="showbtn">Show</button>
+    <button id="hidebtn">Hide</button>
+    <button id="showhide">toggle</button>
+
+    <div class="box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic provident ullam voluptas, itaque odio magni consequatur aliquid iste cupiditate magnam quos at ipsa quidem nihil temporibus accusantium voluptatibus, sequi odit.</div>
+
+
+    <form action="">
+        <input type="text" id="fname" placeholder="Please Enter Your Frist Name ">
+
+        <button id="submitbtn">Submit</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script>
+       $(document).ready(function(){
+            $("#showhide").click(function(){
+                $(".box").toggleClass('demo');
+            });
+
+
+            $("#submitbtn").click(function(){
+                // $("#fname").val();
+                console.log($("#fname").val());
+            });
+
+            $("#hidebtn").click(function() {
+                // console.log("button is clicked");
+                // $(".box").hide();
+                $(".box").slideUp();
+            });
+            $("#showbtn").click(function(){
+                // $(".box").show();
+                $(".box").slideDown();
+            });
+            $("#showhide").click(function(){
+                // $(".box").toggle();
+                $(".box").fadeToggle(1000);
+            });
+
+            $("body").mouseenter(function(){
+                $(this).css({
+                    "background-color":"grey",
+                    "color":"white",
+                });
+            });
+
+            $("#showhide").mousedown(function(){
+                $(this).css( {"background-color" : "red"})
+            });
+            $("#showhide").mouseup(function(){
+                $(this).css( "background-color" , "yellow")
+            });
+       });
+    </script>
+</body>
+</html>
