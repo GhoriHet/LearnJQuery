@@ -44,7 +44,7 @@
                     $("#fname-error").html("");
                 }
 
-                console.log(isNaN(age));
+                // console.log(isNaN(age));
 
                 if (age === '') {
                     $("#age-error").html("Please enter your age.");
@@ -54,9 +54,13 @@
                     $("#age-error").html("");
                 }
 
+                var regpass = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+                    console.log(regpass.test(pass))
                 if (pass === '') {
                     $("#pass-error").html("Please enter your password.");
-                } else {
+                } else if (!regpass.test(pass)) {
+                    $("#pass-error").html("Your password must 8 character and, special character,");
+                }else {
                     $("#pass-error").html("");
                 }
 
