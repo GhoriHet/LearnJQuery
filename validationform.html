@@ -34,33 +34,41 @@
                 var age = $("#age").val();
                 var pass = $("#pass").val();
 
+                var regfname = /^[a-zA-Z ]{2,30}$/;
+
                 if (fname === '') {
-                $("#fname-error").html("Please enter first name.");
-            }  else {
-                $("#fname-error").html("");
-            }
+                    $("#fname-error").html("Please enter first name.");
+                } else if (!regfname.test(fname)) {
+                    $("#fname-error").html("Please enter valid first name.");
+                } else {
+                    $("#fname-error").html("");
+                }
 
-            if (age === '') {
-                $("#age-error").html("Please enter your age.");
-            }  else {
-                $("#age-error").html("");
-            }
+                console.log(isNaN(age));
 
-            if (pass === '') {
-                $("#pass-error").html("Please enter your password.");
-            }  else {
-                $("#pass-error").html("");
-            }
+                if (age === '') {
+                    $("#age-error").html("Please enter your age.");
+                } else if (isNaN(age)) {
+                    $("#age-error").html("Please enter valid your age.");
+                } else {
+                    $("#age-error").html("");
+                }
+
+                if (pass === '') {
+                    $("#pass-error").html("Please enter your password.");
+                } else {
+                    $("#pass-error").html("");
+                }
 
 
-            return false
+                return false
             })
 
-           
+
         })
 
 
-        
+
     </script>
 </body>
 
