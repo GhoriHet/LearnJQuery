@@ -3,3 +3,32 @@
     height: 200px;
     background-color: gray;
 }
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 40%;
+}
+
+
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 40%;
+    width: 30px;
+    height: 30px;
+    color: black;
+    border-radius: 50%;
+    background-color: aliceblue;
+    right: 30px;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    color: black;
+    border-radius: 50%;
+    background-color: aliceblue;
+    left: 10px;
+}
